@@ -1,0 +1,68 @@
+﻿<Page x:Class="rul.Pages.AddEditProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:rul.Pages" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditProductPage">
+
+    <Page.Resources>
+        <sys:String x:Key="defaultImage">../Resources/picture.png</sys:String>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*" />
+                <ColumnDefinition Width="200*" />
+                <ColumnDefinition Width="200*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Артикул: " />
+                <TextBox x:Name="txtArticle" Text="{Binding ProductArticleNumber}" />
+                <TextBlock Text="Наименование: " />
+                <TextBox x:Name="txtTitle" Text="{Binding ProductName}" />
+                <TextBlock Text="Категория: " />
+                <ComboBox x:Name="cmbCategory" SelectedItem="{Binding ProductCategory}" />
+                <TextBlock Text="Количество на складе: " />
+                <TextBox x:Name="txtCountInStock" Text="{Binding ProductQuantityInStock}" />
+                <TextBlock Text="Единица измерения: " />
+                <TextBox x:Name="txtUnit" Text="{Binding Unit}" />
+                <TextBlock Text="Количество в упаковке: " />
+                <TextBox x:Name="txtCountInPack" Text="{Binding CountInPack}" />
+                <TextBlock Text="Минимальное количество: " />
+                <TextBox x:Name="txtMinCount" Text="{Binding MinCount}" />
+                <TextBlock Text="Поставщик: " />
+                <TextBox x:Name="txtSupplier" Text="{Binding Supplier}" />
+                <TextBlock Text="Максимальная скидка (количество): " />
+                <TextBox x:Name="txtMaxDiscount" Text="{Binding MaxDiscountAmount}" />
+                <TextBlock Text="Максимальная скидка (процент): " />
+                <TextBox x:Name="txtMaxDiscountPercent" Text="{Binding MaxDiscountPercent}" />
+                <TextBlock Text="Скидка (количество): " />
+                <TextBox x:Name="txtDiscount" Text="{Binding ProductDiscountAmount}" />
+                <TextBlock Text="Скидка (процент): " />
+                <TextBox x:Name="txtDiscountPercent" Text="{Binding ProductDiscountPercent}" />
+                <TextBlock Text="Цена: " />
+                <TextBox x:Name="txtCost" Text="{Binding ProductCost}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <Image x:Name="img" Width="100" Height="100" Source="{Binding ImgPath, FallbackValue={StaticResource defaultImage}}" />
+                <Button Content="Выбрать изображение" Click="btnSelectImage_Click" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Margin="50 0 0 0">
+                <TextBlock Text="Описание: " />
+                <TextBox x:Name="txtDescription" Text="{Binding ProductDescription}" Height="100" Width="200" TextWrapping="Wrap" />
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.ColumnSpan="3" Margin="0 20 0 0" Visibility="Collapsed">
+                <Button x:Name="btnSaveProduct" Content="Сохранить" Width="200" Click="btnSaveProduct_Click" />
+                <Button x:Name="btnDeleteProduct" Content="Удалить" Width="200" Click="btnDeleteProduct_Click" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>
