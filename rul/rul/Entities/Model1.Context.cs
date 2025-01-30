@@ -12,8 +12,7 @@ namespace rul.Entities
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using rul.Pages;
-
+    
     public partial class RulEntities : DbContext
     {
         private static RulEntities context;
@@ -33,11 +32,10 @@ namespace rul.Entities
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<OrderProduct> OrderProduct { get; set; }
 
         public static RulEntities GetContext()
         {
-            if(context == null)
+            if (context == null)
                 context = new RulEntities();
             return context;
         }

@@ -49,7 +49,7 @@ namespace rul.Pages
             "Зарядные устройства",
         };
 
-        private void btnEnterImage_Click(object sender, RoutedEventArgs e)
+        private void btnSelectImage_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog GetImageDialog = new OpenFileDialog();
 

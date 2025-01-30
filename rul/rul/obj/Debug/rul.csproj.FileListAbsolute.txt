@@ -28,3 +28,10 @@ D:\igor\rul\rul\obj\Debug\Windows\MainWindow.baml
 D:\igor\rul\rul\obj\Debug\Pages\OrderPage.g.cs
 D:\igor\rul\rul\obj\Debug\Pages\OrderTicketPage.g.cs
 D:\igor\rul\rul\obj\Debug\Windows\OrderWindow.g.cs
+D:\igor\rul\rul\obj\Debug\Pages\AddEditProductPage.g.cs
+D:\igor\rul\rul\obj\Debug\Pages\Admin.g.cs
+D:\igor\rul\rul\obj\Debug\Pages\AddEditProductPage.baml
+D:\igor\rul\rul\obj\Debug\Pages\Admin.baml
+D:\igor\rul\rul\obj\Debug\Pages\OrderPage.baml
+D:\igor\rul\rul\obj\Debug\Pages\OrderTicketPage.baml
+D:\igor\rul\rul\obj\Debug\Windows\OrderWindow.baml

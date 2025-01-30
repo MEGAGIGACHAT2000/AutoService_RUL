@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище TradeModelContainer" CdmEntityContainer="TradeEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище RulModelContainer" CdmEntityContainer="RulEntities">
     <EntitySetMapping Name="Order">
-      <EntityTypeMapping TypeName="TradeModel.Order">
+      <EntityTypeMapping TypeName="RulModel.Order">
         <MappingFragment StoreEntitySet="Order">
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
@@ -15,7 +15,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PickupPoint">
-      <EntityTypeMapping TypeName="TradeModel.PickupPoint">
+      <EntityTypeMapping TypeName="RulModel.PickupPoint">
         <MappingFragment StoreEntitySet="PickupPoint">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Address" ColumnName="Address" />
@@ -23,7 +23,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Product">
-      <EntityTypeMapping TypeName="TradeModel.Product">
+      <EntityTypeMapping TypeName="RulModel.Product">
         <MappingFragment StoreEntitySet="Product">
           <ScalarProperty Name="ProductArticleNumber" ColumnName="ProductArticleNumber" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Role">
-      <EntityTypeMapping TypeName="TradeModel.Role">
+      <EntityTypeMapping TypeName="RulModel.Role">
         <MappingFragment StoreEntitySet="Role">
           <ScalarProperty Name="RoleID" ColumnName="RoleID" />
           <ScalarProperty Name="RoleName" ColumnName="RoleName" />
@@ -52,7 +52,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="TradeModel.sysdiagrams">
+      <EntityTypeMapping TypeName="RulModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -63,7 +63,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="User">
-      <EntityTypeMapping TypeName="TradeModel.User">
+      <EntityTypeMapping TypeName="RulModel.User">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="UserSurname" ColumnName="UserSurname" />
@@ -75,7 +75,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="OrderProduct" TypeName="TradeModel.OrderProduct" StoreEntitySet="OrderProduct">
+    <AssociationSetMapping Name="OrderProduct" TypeName="RulModel.OrderProduct" StoreEntitySet="OrderProduct">
       <EndProperty Name="Order">
         <ScalarProperty Name="OrderID" ColumnName="OrderID" />
       </EndProperty>

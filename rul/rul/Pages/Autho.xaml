@@ -25,7 +25,7 @@
 
             <StackPanel Orientation="Horizontal" Height="80" HorizontalAlignment="Center">
                 <Button Name="btnEnterGuest" Margin="5, 15, 5, 5" Content="Войти как гость" Click="btnEnterGuest_Click"/>
-                <Button Name="btnEnter" Margin="5, 15, 5, 5" Content="Войтиь" Click="btnEnter_Click"/>
+                <Button Name="btnEnter" Margin="5, 15, 5, 5" Content="Войти" Click="btnEnter_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

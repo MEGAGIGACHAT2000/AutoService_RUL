@@ -89,7 +89,9 @@ namespace rul.Pages
             txtResultCount.Text = result.Count().ToString();
         }
 
-        private void txtSearch_SelectionChanged(object sender, System.Windows.RoutedEventArgs e)
+        List<Product> orderProducts = new List<Product>();
+
+        private void txtSorting_SelectionChanged(object sender, System.Windows.RoutedEventArgs e)
         {
             UpdateData();
         }
@@ -120,6 +122,17 @@ namespace rul.Pages
                 RulEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
                 lViewProduct.ItemsSource = RulEntities.GetContext().Product.ToList();
             }
+        }
+
+        private void btnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            OrderWindow order = new OrderWindow(orderProducts, user);
+            order.ShowDialog();
         }
     }
 }

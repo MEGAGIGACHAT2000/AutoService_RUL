@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TradeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="RulModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="OrderID" />
@@ -102,7 +102,7 @@
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="TradeEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="RulEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Order" EntityType="Self.Order" />
     <EntitySet Name="PickupPoint" EntityType="Self.PickupPoint" />
     <EntitySet Name="Product" EntityType="Self.Product" />
